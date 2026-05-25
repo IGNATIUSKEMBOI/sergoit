@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Sergoit Primary School</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+      padding: 80px 0 60px; text-align:center; color:white;
+    }
+    .page-hero h1 { color:white; font-size:clamp(2rem,4vw,3rem); }
+    .page-hero p  { color:rgba(255,255,255,.75); margin-top:12px; }
+    .breadcrumb { display:flex;gap:8px;align-items:center;justify-content:center;font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:16px; }
+    .breadcrumb a { color:rgba(255,255,255,.8); }
+    .breadcrumb span { color:var(--gold-light); }
+
+    .faq { padding:80px 0; }
+    .faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    @media(max-width:700px){ .faq-grid{grid-template-columns:1fr;} }
+    .faq-item {
+      background:var(--white); border-radius:var(--radius);
+      padding:24px; border-left:4px solid var(--green);
+      box-shadow:var(--shadow-sm);
+    }
+    .faq-item h4 { font-size:1rem; color:var(--green-dark); margin-bottom:8px; }
+    .faq-item p  { font-size:.88rem; color:var(--gray-600); }
+
+    .admission-section { padding:80px 0; background:var(--gray-100); }
+    .admission-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+    @media(max-width:700px){ .admission-grid{grid-template-columns:1fr;} }
+    .admission-steps { display:flex; flex-direction:column; gap:20px; }
+    .step {
+      display:flex; gap:16px; align-items:flex-start;
+      background:var(--white); padding:20px; border-radius:var(--radius);
+      box-shadow:var(--shadow-sm);
+    }
+    .step-num {
+      width:40px; height:40px; border-radius:50%;
+      background:var(--green); color:white;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Playfair Display',serif; font-size:1.1rem;
+      font-weight:700; flex-shrink:0;
+    }
+    .step h4 { font-size:.95rem; color:var(--green-dark); margin-bottom:4px; }
+    .step p  { font-size:.85rem; color:var(--gray-600); }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left"><span>📍 Sergoit, Eldoret, Uasin Gishu County</span><span>📅 Mon–Fri: 7:00 AM – 5:00 PM</span></div>
+      <div class="topbar-right">
+        <a href="tel:+254712345678">📞 +254 712 345 678</a>
+        <a href="mailto:info@sergoitprimary.sc.ke">✉ info@sergoitprimary.sc.ke</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-emblem">
+          <svg viewBox="0 0 30 30" fill="none"><path d="M15 3L28 10V20L15 27L2 20V10L15 3Z" stroke="white" stroke-width="1.5" fill="none"/><circle cx="15" cy="15" r="3" fill="white"/></svg>
+        </div>
+        <div class="logo-text">
+          <div class="school-name">Sergoit Primary School</div>
+          <div class="school-tagline">Excellence · Integrity · Service</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="alumni.html">Alumni</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="#admission" class="btn btn-primary nav-cta">Apply Now</a>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> › <span>Contact Us</span></div>
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you. Reach out to us with any questions, enquiries, or feedback.</p>
+    </div>
+  </div>
+
+  <!-- Main Contact Section -->
+  <section class="contact" style="padding-top:80px">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-head">
+            <span class="section-label">Contact Information</span>
+            <h2 class="section-title">We're Here to Help</h2>
+            <p class="section-subtitle">Feel free to reach us via any of the channels below. Our admin team is available Monday to Friday.</p>
+          </div>
+          <div class="contact-block fade-in">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Physical Address</h4>
+              <p>Sergoit Primary School<br>Sergoit, Eldoret<br>Uasin Gishu County, Kenya</p>
+            </div>
+          </div>
+          <div class="contact-block fade-in fade-in-delay-1">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone Numbers</h4>
+              <p>
+                Main Office: <a href="tel:+254712345678" style="color:var(--green);font-weight:600">+254 712 345 678</a><br>
+                Deputy Head: <a href="tel:+254723456789" style="color:var(--green);font-weight:600">+254 723 456 789</a>
+              </p>
+            </div>
+          </div>
+          <div class="contact-block fade-in fade-in-delay-2">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email Addresses</h4>
+              <p>
+                General: <a href="mailto:info@sergoitprimary.sc.ke" style="color:var(--green)">info@sergoitprimary.sc.ke</a><br>
+                Admissions: <a href="mailto:admissions@sergoitprimary.sc.ke" style="color:var(--green)">admissions@sergoitprimary.sc.ke</a>
+              </p>
+            </div>
+          </div>
+          <div class="contact-block fade-in">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday – Friday: 7:00 AM – 5:00 PM<br>Saturday: 8:00 AM – 1:00 PM (Term time)<br>Sunday & Public Holidays: Closed</p>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <span class="map-icon">📍</span>
+            <span>Sergoit Primary School</span>
+            <span style="font-size:.75rem;color:var(--green-light)">Sergoit, Eldoret, Uasin Gishu County</span>
+          </div>
+        </div>
+
+        <div class="contact-form fade-in">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form">
+            <div class="contact-form-grid">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+254 7XX XXX XXX" />
+              </div>
+              <div class="form-group full">
+                <label>Email Address *</label>
+                <input type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group full">
+                <label>Subject *</label>
+                <select required>
+                  <option value="">Select a subject</option>
+                  <option>General Enquiry</option>
+                  <option>Admissions Information</option>
+                  <option>Fees & Payments</option>
+                  <option>Academic Performance</option>
+                  <option>Alumni Network</option>
+                  <option>Partnerships & Donations</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label>Your Message *</label>
+                <textarea rows="6" placeholder="Write your message here..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center">
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission Section -->
+  <section class="admission-section" id="admission">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="section-label">Enroll Your Child</span>
+        <h2 class="section-title">Admissions Process</h2>
+        <p class="section-subtitle">Joining Sergoit Primary School is simple. Here's what you need to know.</p>
+      </div>
+      <div class="admission-grid">
+        <div class="admission-steps">
+          <div class="step fade-in">
+            <div class="step-num">1</div>
+            <div>
+              <h4>Contact the School</h4>
+              <p>Call or email us to inquire about available spaces for the current or upcoming term.</p>
+            </div>
+          </div>
+          <div class="step fade-in fade-in-delay-1">
+            <div class="step-num">2</div>
+            <div>
+              <h4>Visit the School</h4>
+              <p>Schedule a visit to tour the facilities, meet the teachers, and understand our approach to education.</p>
+            </div>
+          </div>
+          <div class="step fade-in fade-in-delay-2">
+            <div class="step-num">3</div>
+            <div>
+              <h4>Submit Documents</h4>
+              <p>Provide birth certificate, immunisation card, previous school leaving certificate (if applicable), and 2 passport photos.</p>
+            </div>
+          </div>
+          <div class="step fade-in">
+            <div class="step-num">4</div>
+            <div>
+              <h4>Pay Admission Fee</h4>
+              <p>Settle the registration and term fees at our accounts office. M-Pesa Paybill available.</p>
+            </div>
+          </div>
+          <div class="step fade-in fade-in-delay-1">
+            <div class="step-num">5</div>
+            <div>
+              <h4>Welcome to Sergoit!</h4>
+              <p>Your child receives their uniform list, timetable, and is officially part of the Sergoit family.</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form fade-in" style="background:var(--white)">
+          <h3 style="font-size:1.3rem">Request Admission Form</h3>
+          <p style="color:var(--gray-600);font-size:.9rem;margin-bottom:24px">Fill in your details below and we'll send you an admission pack and call you within 24 hours.</p>
+          <form id="admission-form">
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div class="form-group">
+                <label style="color:var(--gray-800)">Parent / Guardian Name *</label>
+                <input type="text" placeholder="Full name" required style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:8px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;color:var(--gray-800)" />
+              </div>
+              <div class="form-group">
+                <label style="color:var(--gray-800)">Child's Name *</label>
+                <input type="text" placeholder="Child's full name" required style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:8px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;color:var(--gray-800)" />
+              </div>
+              <div class="form-group">
+                <label style="color:var(--gray-800)">Grade Applying For *</label>
+                <select required style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:8px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;color:var(--gray-800)">
+                  <option value="">Select Grade</option>
+                  <option>Pre-Primary 1 (PP1)</option>
+                  <option>Pre-Primary 2 (PP2)</option>
+                  <option>Grade 1</option><option>Grade 2</option><option>Grade 3</option>
+                  <option>Grade 4</option><option>Grade 5</option><option>Grade 6</option>
+                  <option>Grade 7</option><option>Grade 8</option><option>Grade 9</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label style="color:var(--gray-800)">Phone Number *</label>
+                <input type="tel" placeholder="+254 7XX XXX XXX" required style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:8px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;color:var(--gray-800)" />
+              </div>
+              <div class="form-group">
+                <label style="color:var(--gray-800)">Email Address</label>
+                <input type="email" placeholder="parent@example.com" style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:8px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;color:var(--gray-800)" />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center">
+              Request Admission Pack →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="section-label">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item fade-in">
+          <h4>What curriculum does Sergoit Primary follow?</h4>
+          <p>We follow the Competency Based Curriculum (CBC) as prescribed by the Kenya Institute of Curriculum Development (KICD) and the Ministry of Education.</p>
+        </div>
+        <div class="faq-item fade-in fade-in-delay-1">
+          <h4>When does each term begin and end?</h4>
+          <p>Kenya's school calendar runs three terms. Dates are set by the Ministry of Education. Please contact us or check the school notice board for exact dates each year.</p>
+        </div>
+        <div class="faq-item fade-in">
+          <h4>Does the school offer boarding facilities?</h4>
+          <p>Currently Sergoit Primary operates as a day school. We are exploring options for a boarding section. Contact us for the latest updates.</p>
+        </div>
+        <div class="faq-item fade-in fade-in-delay-1">
+          <h4>How can I pay school fees?</h4>
+          <p>Fees can be paid at the accounts office by cash or cheque, or via M-Pesa Paybill. Please contact the school for the current Paybill number.</p>
+        </div>
+        <div class="faq-item fade-in">
+          <h4>Are there bursaries or fee assistance programmes?</h4>
+          <p>Yes. We partner with the county government and local NGOs to support deserving students. Speak to the headteacher for more information.</p>
+        </div>
+        <div class="faq-item fade-in fade-in-delay-1">
+          <h4>How do I join the school's WhatsApp parent group?</h4>
+          <p>Parents of enrolled students are automatically added to the class WhatsApp groups upon registration. Ask your child's class teacher for the link.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-emblem" style="width:48px;height:48px">
+            <svg viewBox="0 0 30 30" fill="none"><path d="M15 3L28 10V20L15 27L2 20V10L15 3Z" stroke="white" stroke-width="1.5" fill="none"/><circle cx="15" cy="15" r="3" fill="white"/></svg>
+          </div>
+          <div class="school-name">Sergoit Primary School</div>
+          <p>Nurturing excellence, integrity, and service in Eldoret since 1999.</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">𝕏</a>
+            <a href="#" class="social-icon">W</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Admissions</h4><ul><li><a href="#admission">How to Apply</a></li><li><a href="#admission">Requirements</a></li><li><a href="contact.html">Contact Admissions</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 Sergoit, Eldoret</a></li><li><a href="tel:+254712345678">📞 +254 712 345 678</a></li><li><a href="mailto:info@sergoitprimary.sc.ke">✉ info@sergoitprimary.sc.ke</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Sergoit Primary School. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    // Admission form handler
+    document.getElementById('admission-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      btn.textContent = '✓ Request Received — We\'ll call you soon!';
+      btn.style.background = 'var(--green-dark)';
+      setTimeout(() => { btn.textContent = 'Request Admission Pack →'; btn.style.background = ''; this.reset(); }, 4000);
+    });
+  </script>
+</body>
+</html>

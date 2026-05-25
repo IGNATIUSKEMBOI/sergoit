@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics | Sergoit Primary School</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+      padding: 80px 0 60px; text-align:center; color:white;
+    }
+    .page-hero h1 { color:white; font-size:clamp(2rem,4vw,3rem); }
+    .page-hero p  { color:rgba(255,255,255,.75); margin-top:12px; }
+    .breadcrumb { display:flex;gap:8px;align-items:center;justify-content:center;font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:16px; }
+    .breadcrumb a { color:rgba(255,255,255,.8); }
+    .breadcrumb span { color:var(--gold-light); }
+
+    .curriculum { padding:80px 0; }
+    .cbc-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-bottom:64px; }
+    @media(max-width:700px){ .cbc-grid{grid-template-columns:1fr;} }
+    .grade-bands { display:flex; flex-direction:column; gap:16px; }
+    .grade-band {
+      display:flex; gap:16px; align-items:flex-start;
+      background:var(--white); border-radius:var(--radius); padding:20px;
+      box-shadow:var(--shadow-sm); border-left:4px solid var(--green);
+      transition:var(--transition);
+    }
+    .grade-band:hover { box-shadow:var(--shadow-md); transform:translateX(4px); }
+    .grade-band:nth-child(2) { border-left-color:var(--gold); }
+    .grade-band:nth-child(3) { border-left-color:var(--green-light); }
+    .gb-icon { font-size:1.8rem; }
+    .gb-info h4 { font-size:1rem; color:var(--green-dark); margin-bottom:4px; }
+    .gb-info p  { font-size:.88rem; color:var(--gray-600); }
+
+    .subjects-section { padding:80px 0; background:var(--gray-100); }
+    .subjects-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    @media(max-width:900px){ .subjects-grid{grid-template-columns:repeat(3,1fr);} }
+    @media(max-width:600px){ .subjects-grid{grid-template-columns:repeat(2,1fr);} }
+    .subject-pill {
+      background:var(--white); border-radius:var(--radius); padding:16px;
+      text-align:center; box-shadow:var(--shadow-sm); transition:var(--transition);
+    }
+    .subject-pill:hover { background:var(--green); color:white; transform:translateY(-2px); }
+    .subject-pill:hover .sp-label { color:white; }
+    .sp-icon { font-size:1.8rem; margin-bottom:8px; }
+    .sp-label { font-size:.85rem; font-weight:600; color:var(--green-dark); }
+
+    .results { padding:80px 0; }
+    .results-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+    @media(max-width:700px){ .results-grid{grid-template-columns:1fr;} }
+    .results-table { width:100%; border-collapse:collapse; }
+    .results-table th { background:var(--green-dark); color:white; padding:12px 16px; text-align:left; font-size:.85rem; }
+    .results-table td { padding:12px 16px; font-size:.88rem; border-bottom:1px solid var(--gray-200); }
+    .results-table tr:hover td { background:rgba(26,107,60,.05); }
+    .results-table .highlight td { background:rgba(200,150,12,.1); font-weight:600; }
+
+    .clubs { padding:80px 0; background:var(--cream); }
+    .clubs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    @media(max-width:900px){ .clubs-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:600px){ .clubs-grid{grid-template-columns:1fr;} }
+    .club-card {
+      background:var(--white); border-radius:var(--radius-lg); padding:28px;
+      box-shadow:var(--shadow-sm); transition:var(--transition);
+    }
+    .club-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .club-icon { font-size:2.2rem; margin-bottom:12px; }
+    .club-card h4 { font-size:1rem; color:var(--green-dark); margin-bottom:6px; }
+    .club-card p  { font-size:.88rem; color:var(--gray-600); }
+    .club-meta { margin-top:12px; font-size:.78rem; color:var(--gold); font-weight:600; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left"><span>📍 Sergoit, Eldoret, Uasin Gishu County</span></div>
+      <div class="topbar-right">
+        <a href="tel:+254712345678">📞 +254 712 345 678</a>
+        <a href="mailto:info@sergoitprimary.sc.ke">✉ info@sergoitprimary.sc.ke</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-emblem">
+          <svg viewBox="0 0 30 30" fill="none"><path d="M15 3L28 10V20L15 27L2 20V10L15 3Z" stroke="white" stroke-width="1.5" fill="none"/><circle cx="15" cy="15" r="3" fill="white"/></svg>
+        </div>
+        <div class="logo-text">
+          <div class="school-name">Sergoit Primary School</div>
+          <div class="school-tagline">Excellence · Integrity · Service</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="academics.html" class="active">Academics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="alumni.html">Alumni</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html#admission" class="btn btn-primary nav-cta">Apply Now</a>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> › <span>Academics</span></div>
+      <h1>Academic Programs</h1>
+      <p>Delivering world-class CBC education that prepares every learner for a bright future.</p>
+    </div>
+  </div>
+
+  <!-- CBC Curriculum -->
+  <section class="curriculum">
+    <div class="container">
+      <div class="cbc-grid">
+        <div>
+          <span class="section-label">Our Curriculum</span>
+          <h2 class="section-title">Competency Based Curriculum (CBC)</h2>
+          <p style="color:var(--gray-600);margin-bottom:20px">
+            Sergoit Primary School is fully compliant with Kenya's CBC framework, designed to develop
+            learners' competencies — values, skills, and knowledge — needed to flourish in the 21st century.
+          </p>
+          <p style="color:var(--gray-600);margin-bottom:28px">
+            Our teachers are trained and certified in CBC delivery, with ongoing professional development
+            to ensure every classroom experience is engaging, practical, and learner-centred.
+          </p>
+          <a href="contact.html#admission" class="btn btn-primary">Enroll Your Child</a>
+        </div>
+        <div class="grade-bands">
+          <div class="grade-band fade-in">
+            <div class="gb-icon">🌱</div>
+            <div class="gb-info">
+              <h4>Pre-Primary Level (PP1 – PP2)</h4>
+              <p>Play-based learning that builds motor skills, language, numeracy, and social development. Ages 4–5.</p>
+            </div>
+          </div>
+          <div class="grade-band fade-in fade-in-delay-1">
+            <div class="gb-icon">📘</div>
+            <div class="gb-info">
+              <h4>Lower Primary (Grade 1 – 3)</h4>
+              <p>Literacy, numeracy, environmental activities, creative arts, and movement. Ages 6–8.</p>
+            </div>
+          </div>
+          <div class="grade-band fade-in fade-in-delay-2">
+            <div class="gb-icon">🔭</div>
+            <div class="gb-info">
+              <h4>Upper Primary (Grade 4 – 6)</h4>
+              <p>Deeper subject exploration: Mathematics, English, Kiswahili, Science & Technology, Social Studies, Creative Arts. Ages 9–11.</p>
+            </div>
+          </div>
+          <div class="grade-band fade-in">
+            <div class="gb-icon">🎓</div>
+            <div class="gb-info">
+              <h4>Junior School (Grade 7 – 9)</h4>
+              <p>Pre-secondary level with specialised subject areas, project work, and KCPE preparation for transition to senior secondary. Ages 12–14.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects Offered -->
+  <section class="subjects-section" id="subjects">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="section-label">What We Teach</span>
+        <h2 class="section-title">Subjects Offered</h2>
+      </div>
+      <div class="subjects-grid">
+        <div class="subject-pill fade-in"><div class="sp-icon">🔢</div><div class="sp-label">Mathematics</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">📖</div><div class="sp-label">English</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">🗣</div><div class="sp-label">Kiswahili</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">🔬</div><div class="sp-label">Science & Technology</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">🌍</div><div class="sp-label">Social Studies</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">✝️</div><div class="sp-label">CRE / IRE</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">🎨</div><div class="sp-label">Creative Arts</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">💻</div><div class="sp-label">Digital Literacy</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">🏃</div><div class="sp-label">Physical Education</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">🎵</div><div class="sp-label">Music</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">🌱</div><div class="sp-label">Agriculture</div></div>
+        <div class="subject-pill fade-in"><div class="sp-icon">🤝</div><div class="sp-label">Life Skills</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Results -->
+  <section class="results">
+    <div class="container">
+      <div class="results-grid">
+        <div>
+          <span class="section-label">Our Track Record</span>
+          <h2 class="section-title">KCPE Performance</h2>
+          <p style="color:var(--gray-600);margin-bottom:24px">
+            Sergoit Primary has consistently posted impressive KCPE results, with the school's mean score
+            rising year on year. Our top students regularly earn places at national schools.
+          </p>
+          <div style="display:flex;gap:24px;flex-wrap:wrap">
+            <div style="text-align:center">
+              <div style="font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--green);font-weight:700">98%</div>
+              <div style="font-size:.82rem;color:var(--gray-600)">2024 Pass Rate</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--gold);font-weight:700">412</div>
+              <div style="font-size:.82rem;color:var(--gray-600)">Top Score 2024</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--green-light);font-weight:700">287</div>
+              <div style="font-size:.82rem;color:var(--gray-600)">2024 Mean Score</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <table class="results-table">
+            <thead>
+              <tr><th>Year</th><th>Candidates</th><th>Mean Score</th><th>Top Score</th></tr>
+            </thead>
+            <tbody>
+              <tr class="highlight"><td>2024</td><td>142</td><td>287</td><td>412</td></tr>
+              <tr><td>2023</td><td>138</td><td>279</td><td>408</td></tr>
+              <tr><td>2022</td><td>125</td><td>271</td><td>399</td></tr>
+              <tr><td>2021</td><td>119</td><td>265</td><td>391</td></tr>
+              <tr><td>2020</td><td>114</td><td>258</td><td>385</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clubs & Activities -->
+  <section class="clubs" id="sports">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="section-label">Beyond the Classroom</span>
+        <h2 class="section-title">Clubs & Co-Curricular Activities</h2>
+        <p class="section-subtitle">We nurture talent, character, and leadership through rich co-curricular programmes.</p>
+      </div>
+      <div class="clubs-grid" id="arts">
+        <div class="club-card fade-in">
+          <div class="club-icon">⚽</div>
+          <h4>Football Club</h4>
+          <p>Boys and girls football teams competing at sub-county, county, and national level under qualified coaching staff.</p>
+          <div class="club-meta">🏆 County Champions 2023</div>
+        </div>
+        <div class="club-card fade-in fade-in-delay-1">
+          <div class="club-icon">🏃</div>
+          <h4>Athletics</h4>
+          <p>Cross-country, track events, and field athletics. Several of our students have competed at national schools games.</p>
+          <div class="club-meta">🥇 Regional Gold 2024</div>
+        </div>
+        <div class="club-card fade-in fade-in-delay-2">
+          <div class="club-icon">🎵</div>
+          <h4>School Choir</h4>
+          <p>Award-winning choir with 60+ members performing at festivals, community events, and national competitions.</p>
+          <div class="club-meta">🏆 Regional 1st Place 2024</div>
+        </div>
+        <div class="club-card fade-in">
+          <div class="club-icon">💃</div>
+          <h4>Traditional Dance</h4>
+          <p>Celebrating Kenya's diverse cultures through authentic traditional dances including Kalenjin, Kikuyu, and Luo styles.</p>
+          <div class="club-meta">🎭 Cultural Ambassadors</div>
+        </div>
+        <div class="club-card fade-in fade-in-delay-1" id="scouting">
+          <div class="club-icon">⚜️</div>
+          <h4>Scouting</h4>
+          <p>Kenya Scouts Association troop building leadership, outdoor skills, community service, and teamwork.</p>
+          <div class="club-meta">250+ Active Scouts</div>
+        </div>
+        <div class="club-card fade-in fade-in-delay-2">
+          <div class="club-icon">🌿</div>
+          <h4>Environmental Club</h4>
+          <p>Tree planting, waste management, and environmental awareness campaigns led by passionate student conservationists.</p>
+          <div class="club-meta">🌳 Green School Award</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-emblem" style="width:48px;height:48px">
+            <svg viewBox="0 0 30 30" fill="none"><path d="M15 3L28 10V20L15 27L2 20V10L15 3Z" stroke="white" stroke-width="1.5" fill="none"/><circle cx="15" cy="15" r="3" fill="white"/></svg>
+          </div>
+          <div class="school-name">Sergoit Primary School</div>
+          <p>Nurturing excellence, integrity, and service in Eldoret since 1999.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Academics</h4><ul><li><a href="academics.html">CBC Curriculum</a></li><li><a href="academics.html#subjects">Subjects</a></li><li><a href="academics.html#sports">Sports</a></li><li><a href="academics.html#arts">Arts & Culture</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 Sergoit, Eldoret</a></li><li><a href="tel:+254712345678">📞 +254 712 345 678</a></li><li><a href="mailto:info@sergoitprimary.sc.ke">✉ info@sergoitprimary.sc.ke</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Sergoit Primary School. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

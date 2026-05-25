@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumni | Sergoit Primary School</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+      padding: 80px 0 60px; text-align:center; color:white;
+    }
+    .page-hero h1 { color:white; font-size: clamp(2rem,4vw,3rem); }
+    .page-hero p  { color:rgba(255,255,255,.75); margin-top:12px; }
+    .breadcrumb { display:flex;gap:8px;align-items:center;justify-content:center;font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:16px; }
+    .breadcrumb a { color:rgba(255,255,255,.8); }
+    .breadcrumb span { color:var(--gold-light); }
+
+    .alumni-hero-stats {
+      display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+      background:rgba(255,255,255,.15); border-radius:var(--radius);
+      overflow:hidden; margin-top:40px;
+    }
+    .ah-stat {
+      background:rgba(255,255,255,.1); padding:24px; text-align:center;
+    }
+    .ah-stat .num { font-family:'Playfair Display',serif; font-size:2rem; color:var(--gold-light); font-weight:700; }
+    .ah-stat .lbl { font-size:.8rem; color:rgba(255,255,255,.7); margin-top:4px; text-transform:uppercase; letter-spacing:.05em; }
+
+    @media(max-width:600px){ .alumni-hero-stats{grid-template-columns:repeat(2,1fr);} }
+
+    .alumni-stories { padding:80px 0; }
+    .stories-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+    }
+    @media(max-width:900px){ .stories-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:600px){ .stories-grid{grid-template-columns:1fr;} }
+
+    .story-card {
+      background:var(--white); border-radius:var(--radius-lg);
+      overflow:hidden; box-shadow:var(--shadow-sm);
+      transition:var(--transition);
+      position:relative;
+    }
+    .story-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
+    .story-card-top {
+      background:linear-gradient(135deg, var(--green-dark) 0%, var(--green-light) 100%);
+      padding:32px 24px; text-align:center;
+    }
+    .story-avatar {
+      width:80px; height:80px; border-radius:50%;
+      background:rgba(255,255,255,.2);
+      border:3px solid rgba(255,255,255,.5);
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 12px;
+      font-family:'Playfair Display',serif; font-size:2rem;
+      font-weight:700; color:white;
+    }
+    .story-card-top h3 { color:white; font-size:1.1rem; margin-bottom:4px; }
+    .story-class { color:var(--gold-light); font-size:.8rem; font-weight:600; }
+    .story-card-body { padding:24px; }
+    .story-profession {
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(26,107,60,.1); color:var(--green);
+      font-size:.78rem; font-weight:600; padding:4px 12px;
+      border-radius:50px; margin-bottom:12px;
+    }
+    .story-card-body p { font-size:.88rem; color:var(--gray-600); font-style:italic; line-height:1.7; }
+    .story-card-body p::before { content:'"'; font-size:1.4rem; color:var(--gold); line-height:0; vertical-align:-4px; margin-right:2px; }
+    .story-card-body p::after  { content:'"'; font-size:1.4rem; color:var(--gold); line-height:0; vertical-align:-4px; margin-left:2px; }
+
+    .alumni-network { padding:80px 0; background:var(--gray-100); }
+    .network-tabs { display:flex; gap:10px; margin-bottom:36px; flex-wrap:wrap; }
+    .network-tab {
+      padding:10px 22px; border-radius:50px; border:2px solid var(--gray-200);
+      background:var(--white); cursor:pointer; font-size:.88rem; font-weight:500;
+      color:var(--gray-600); transition:var(--transition); font-family:'DM Sans',sans-serif;
+    }
+    .network-tab.active { background:var(--green); border-color:var(--green); color:var(--white); }
+
+    .register-section { padding:80px 0; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left"><span>📍 Sergoit, Eldoret, Uasin Gishu County</span></div>
+      <div class="topbar-right">
+        <a href="tel:+254712345678">📞 +254 712 345 678</a>
+        <a href="mailto:info@sergoitprimary.sc.ke">✉ info@sergoitprimary.sc.ke</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-emblem">
+          <svg viewBox="0 0 30 30" fill="none"><path d="M15 3L28 10V20L15 27L2 20V10L15 3Z" stroke="white" stroke-width="1.5" fill="none"/><circle cx="15" cy="15" r="3" fill="white"/></svg>
+        </div>
+        <div class="logo-text">
+          <div class="school-name">Sergoit Primary School</div>
+          <div class="school-tagline">Excellence · Integrity · Service</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="alumni.html" class="active">Alumni</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html#admission" class="btn btn-primary nav-cta">Apply Now</a>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> › <span>Alumni</span></div>
+      <h1>Our Alumni Family</h1>
+      <p>Thousands of Sergoit graduates are making a difference across Kenya and the world.</p>
+      <div class="alumni-hero-stats">
+        <div class="ah-stat"><div class="num" data-target="5000" data-suffix="+">0</div><div class="lbl">Total Alumni</div></div>
+        <div class="ah-stat"><div class="num" data-target="25" data-suffix="">0</div><div class="lbl">Graduating Classes</div></div>
+        <div class="ah-stat"><div class="num" data-target="47" data-suffix="">0</div><div class="lbl">Counties Represented</div></div>
+        <div class="ah-stat"><div class="num" data-target="12" data-suffix="">0</div><div class="lbl">Countries Worldwide</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alumni Stories -->
+  <section class="alumni-stories" id="stories">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="section-label">Proud Graduates</span>
+        <h2 class="section-title">Alumni Success Stories</h2>
+        <p class="section-subtitle">Hear from some of our distinguished graduates who carry the Sergoit spirit with pride.</p>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card fade-in">
+          <div class="story-card-top">
+            <div class="story-avatar">JK</div>
+            <h3>James Kipchoge</h3>
+            <div class="story-class">Class of 2005</div>
+          </div>
+          <div class="story-card-body">
+            <span class="story-profession">⚕️ Medical Doctor</span>
+            <p>Sergoit shaped who I am. The discipline and love for learning I gained here guided me through medical school and into a career serving communities in Rift Valley.</p>
+          </div>
+        </div>
+        <div class="story-card fade-in fade-in-delay-1">
+          <div class="story-card-top">
+            <div class="story-avatar">AM</div>
+            <h3>Aisha Mutai</h3>
+            <div class="story-class">Class of 2010</div>
+          </div>
+          <div class="story-card-body">
+            <span class="story-profession">⚖️ Advocate of the High Court</span>
+            <p>My teachers at Sergoit believed in me when I needed it most. That foundation of confidence and integrity took me through Law School and into practice.</p>
+          </div>
+        </div>
+        <div class="story-card fade-in fade-in-delay-2">
+          <div class="story-card-top">
+            <div class="story-avatar">BT</div>
+            <h3>Brian Tarus</h3>
+            <div class="story-class">Class of 2008</div>
+          </div>
+          <div class="story-card-body">
+            <span class="story-profession">💻 Software Engineer – Nairobi</span>
+            <p>From the classrooms of Sergoit to tech startups in Nairobi — this school gave me problem-solving skills and grit that no university could have taught alone.</p>
+          </div>
+        </div>
+        <div class="story-card fade-in">
+          <div class="story-card-top">
+            <div class="story-avatar">GC</div>
+            <h3>Grace Chebet</h3>
+            <div class="story-class">Class of 2013</div>
+          </div>
+          <div class="story-card-body">
+            <span class="story-profession">🎓 University Lecturer</span>
+            <p>Education was always celebrated at Sergoit. My teachers' passion for knowledge ignited mine, and I now pass that same fire to the next generation of students.</p>
+          </div>
+        </div>
+        <div class="story-card fade-in fade-in-delay-1">
+          <div class="story-card-top">
+            <div class="story-avatar">PK</div>
+            <h3>Peter Kosgei</h3>
+            <div class="story-class">Class of 2001</div>
+          </div>
+          <div class="story-card-body">
+            <span class="story-profession">🏢 Business Executive</span>
+            <p>Sergoit instilled leadership values in me from a young age — participating in school activities, taking responsibility, and always striving to give my best.</p>
+          </div>
+        </div>
+        <div class="story-card fade-in fade-in-delay-2">
+          <div class="story-card-top">
+            <div class="story-avatar">FJ</div>
+            <h3>Fatuma Juma</h3>
+            <div class="story-class">Class of 2015</div>
+          </div>
+          <div class="story-card-body">
+            <span class="story-profession">✈️ Aviation Professional</span>
+            <p>I dreamed big because Sergoit taught me no dream is out of reach. Today I work in aviation and still credit this school for the discipline that got me here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alumni Network Directory -->
+  <section class="alumni-network">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Connect & Network</span>
+        <h2 class="section-title">Alumni Directory</h2>
+        <p class="section-subtitle">Find and connect with fellow Sergoit graduates from your year.</p>
+      </div>
+      <div class="network-tabs">
+        <button class="network-tab active">All Years</button>
+        <button class="network-tab">2020s</button>
+        <button class="network-tab">2010s</button>
+        <button class="network-tab">2000s</button>
+        <button class="network-tab">1990s</button>
+      </div>
+      <div class="alumni-cards">
+        <div class="alumni-card fade-in">
+          <div class="alumni-avatar">JK</div>
+          <h4>James Kipchoge</h4>
+          <div class="class-year">Class of 2005</div>
+          <p>Medical Doctor, Eldoret County Hospital</p>
+        </div>
+        <div class="alumni-card fade-in fade-in-delay-1">
+          <div class="alumni-avatar">AM</div>
+          <h4>Aisha Mutai</h4>
+          <div class="class-year">Class of 2010</div>
+          <p>Advocate, High Court of Kenya</p>
+        </div>
+        <div class="alumni-card fade-in fade-in-delay-2">
+          <div class="alumni-avatar">BT</div>
+          <h4>Brian Tarus</h4>
+          <div class="class-year">Class of 2008</div>
+          <p>Senior Software Engineer, Nairobi</p>
+        </div>
+        <div class="alumni-card fade-in">
+          <div class="alumni-avatar">GC</div>
+          <h4>Grace Chebet</h4>
+          <div class="class-year">Class of 2013</div>
+          <p>Lecturer, Moi University</p>
+        </div>
+        <div class="alumni-card fade-in fade-in-delay-1">
+          <div class="alumni-avatar">PK</div>
+          <h4>Peter Kosgei</h4>
+          <div class="class-year">Class of 2001</div>
+          <p>Regional Director, KCB Bank</p>
+        </div>
+        <div class="alumni-card fade-in fade-in-delay-2">
+          <div class="alumni-avatar">FJ</div>
+          <h4>Fatuma Juma</h4>
+          <div class="class-year">Class of 2015</div>
+          <p>Aviation Professional, JKIA Nairobi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section class="register-section" id="register">
+    <div class="container">
+      <div class="alumni-form-box">
+        <div>
+          <span class="section-label" style="color:var(--gold-light)">Join Us</span>
+          <h2 class="section-title" style="color:white">Register as an Alumni</h2>
+          <p class="section-subtitle" style="color:rgba(255,255,255,.7)">
+            Stay connected with your school, mentor current students, and celebrate our shared heritage.
+            Registration is free and takes less than 2 minutes.
+          </p>
+          <ul style="list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:10px">
+            <li style="color:rgba(255,255,255,.8);font-size:.9rem">✅ Access alumni newsletter and school updates</li>
+            <li style="color:rgba(255,255,255,.8);font-size:.9rem">✅ Network with thousands of fellow graduates</li>
+            <li style="color:rgba(255,255,255,.8);font-size:.9rem">✅ Invitations to alumni reunions and events</li>
+            <li style="color:rgba(255,255,255,.8);font-size:.9rem">✅ Opportunities to mentor current students</li>
+          </ul>
+        </div>
+        <form id="alumni-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" placeholder="Doe" required />
+            </div>
+            <div class="form-group">
+              <label>Year of Graduation *</label>
+              <select required>
+                <option value="">Select Year</option>
+                <option>2024</option><option>2023</option><option>2022</option>
+                <option>2021</option><option>2020</option><option>2019</option>
+                <option>2018</option><option>2017</option><option>2016</option>
+                <option>2015</option><option>2014</option><option>2013</option>
+                <option>2012</option><option>2011</option><option>2010</option>
+                <option>2009</option><option>2008</option><option>2007</option>
+                <option>2006</option><option>2005</option><option>2000–2004</option>
+                <option>Before 2000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+254 7XX XXX XXX" />
+            </div>
+            <div class="form-group full">
+              <label>Email Address *</label>
+              <input type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group full">
+              <label>Current Profession / Occupation</label>
+              <input type="text" placeholder="e.g. Teacher, Engineer, Entrepreneur..." />
+            </div>
+            <div class="form-group full">
+              <label>County / Country of Residence</label>
+              <input type="text" placeholder="e.g. Nairobi, Kenya" />
+            </div>
+            <div class="form-group full">
+              <label>Share a memory or message for current students</label>
+              <textarea rows="3" placeholder="What would you tell your younger self at Sergoit?"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-gold" style="margin-top:20px;width:100%;justify-content:center">
+            Register as Alumni →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-emblem" style="width:48px;height:48px">
+            <svg viewBox="0 0 30 30" fill="none"><path d="M15 3L28 10V20L15 27L2 20V10L15 3Z" stroke="white" stroke-width="1.5" fill="none"/><circle cx="15" cy="15" r="3" fill="white"/></svg>
+          </div>
+          <div class="school-name">Sergoit Primary School</div>
+          <p>Nurturing excellence, integrity, and service in Eldoret since 1999.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="alumni.html">Alumni</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Alumni</h4><ul><li><a href="alumni.html#stories">Success Stories</a></li><li><a href="alumni.html#register">Register</a></li><li><a href="#">Alumni Events</a></li><li><a href="#">Mentorship</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 Sergoit, Eldoret</a></li><li><a href="tel:+254712345678">📞 +254 712 345 678</a></li><li><a href="mailto:info@sergoitprimary.sc.ke">✉ info@sergoitprimary.sc.ke</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Sergoit Primary School. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
